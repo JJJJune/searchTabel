@@ -1,0 +1,10 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 250px;
+    border:  2px solid ;
+    margin-left: 100px;
+    border-color: rgb(233, 228, 228);
+    margin-top: 50px;
+}
