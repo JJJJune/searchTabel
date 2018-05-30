@@ -2,6 +2,10 @@ import React, { PureComponent } from 'react'
 import './styles.css'
 
 export default class SearchBar extends PureComponent {
+    constructor(props) {
+        super(props)
+    
+    }
     render() {
         return(
             <form className="app-searchbar">

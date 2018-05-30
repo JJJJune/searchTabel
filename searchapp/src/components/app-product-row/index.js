@@ -3,8 +3,8 @@ import './styles.css'
 
 export default class ProductRow extends PureComponent {
     render() {
-        var name = this.props.product.stocked ?
-          this.props.product.name :
+      //<ProductRow product={product} key={product.name} />
+        var name = this.props.product.stocked ? this.props.product.name :
           <span style={{color: 'red'}}>
             {this.props.product.name}
           </span>;
