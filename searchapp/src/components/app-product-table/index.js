@@ -6,7 +6,12 @@ export default class ProductTable extends PureComponent {
     render() {
         var rows = [];
         var lastCategory = null;
-        this.props.products.forEach(function(product) {
+        console.log(this.props.inStockOnly)
+
+        this.props.products.map( (product) => {
+          if (product.name.indexOf(this.props.filterText) === -1 || (!product.stocked && this.props.inStockOnly)){
+            return
+          }
           if (product.category !== lastCategory) {
             rows.push(<ProductTitle category={product.category} key={product.category} />);
           }
