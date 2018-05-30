@@ -10,7 +10,6 @@ export default class SearchBar extends PureComponent {
     }
     handleInstockInoutChange = (e) => {
         this.props.onInStockInput(e.target.checked)
-    }
     render() {
         return(
             <form className="app-searchbar">
