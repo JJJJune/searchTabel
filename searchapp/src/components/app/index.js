@@ -13,11 +13,22 @@ var PRODUCTS = [
   ];
 
 export default class App extends PureComponent {
+    constructor(props){
+        super(props)
+        this.state = {
+          filterText:'',
+          isStockOnly: false
+        }
+      }
     render() {
         return(
             <div className="app">
-                <SearchBar />
-                <ProductTable  products={PRODUCTS} />
+                <SearchBar filterText={this.state.filterText}
+                            inStockOnly={this.state.inStockOnly}/>
+
+                <ProductTable  products={PRODUCTS}
+                                filterText={this.state.filterText}
+                                inStockOnly={this.state.inStockOnly} />
             </div>
         );
     }
